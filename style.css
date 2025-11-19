@@ -1,0 +1,311 @@
+/* ---------------------------------------------------
+   BASE
+--------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.homepage {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('images/background-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* ---------------------------------------------------
+   NAVBAR
+--------------------------------------------------- */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: #E5AA70;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.navbar-items {
+    margin-left: auto;
+}
+.navbar-items ul {
+    list-style: none;
+}
+.navbar-items ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.navbar-items ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.navbar-items ul li a:hover {
+    color: #fff;
+}
+
+/* BURGER MENU */
+.burger {
+    font-size: 35px;
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+    color: #000;
+}
+
+/* ---------------------------------------------------
+   HERO SECTION
+--------------------------------------------------- */
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.heading {
+    font-size: 40px;
+    color: #E5AA70;
+}
+.heading span {
+    color: #fff;
+}
+.para {
+    font-size: 14px;
+    margin-top: 15px;
+}
+.btn {
+    margin-top: 20px;
+    padding: 12px 22px;
+    font-size: 18px;
+    background: #fff;
+    border: 2px solid #E5AA70;
+    cursor: pointer;
+}
+.btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* ---------------------------------------------------
+   SOCIAL ICONS
+--------------------------------------------------- */
+.icons-col {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    z-index: 200;
+}
+.icons {
+    background: #E5AA70;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.icons i {
+    font-size: 25px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   ABOUT SECTION
+--------------------------------------------------- */
+.sec {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+.sub_heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.sub_heading h1,
+.sub_heading p {
+    width: 48%;
+}
+
+.box {
+    margin-top: 40px;
+    position: relative;
+}
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.A_box {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    padding: 2%;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* ---------------------------------------------------
+   SERVICES
+--------------------------------------------------- */
+.service_box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.boxes {
+    width: 32%;
+    text-align: left;
+}
+.boxes img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ---------------------------------------------------
+   CONTACT SECTION
+--------------------------------------------------- */
+.contact-sec {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.contact_box {
+    width: 48%;
+    padding: 25px;
+    background: url(images/img5.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+}
+.contact_box input,
+.contact_box textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.map-container {
+    width: 48%;
+    position: relative;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* ---------------------------------------------------
+   GALLERY SECTION
+--------------------------------------------------- */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    margin-top: 30px;
+}
+.image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    background: grey;
+    color: #fff;
+}
+
+/* ---------------------------------------------------
+   MODERN RESPONSIVE BREAKPOINTS (2018–2025)
+--------------------------------------------------- */
+
+/* TABLETS 1024px */
+@media only screen and (max-width: 1024px) {
+    .sub_heading { flex-direction: column; text-align: center; }
+    .sub_heading h1, .sub_heading p { width: 90%; }
+    .service_box { flex-direction: column; align-items: center; }
+    .boxes { width: 80%; margin-bottom: 20px; }
+}
+
+/* BURGER MENU ACTIVE ≤ 887px */
+@media only screen and (max-width: 887px) {
+    .burger { display: block; }
+
+    .navbar-items {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        background: #E5AA70;
+        padding-top: 100px;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .navbar-items ul li {
+        display: block;
+        padding: 20px;
+    }
+
+    .show-menu {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .contact-sec {
+        flex-direction: column;
+    }
+    .contact_box, .map-container { width: 100%; margin-bottom: 25px; }
+
+    .gallery-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* LARGE PHONES 600px */
+@media only screen and (max-width: 600px) {
+    .heading { font-size: 32px; }
+    .sub_heading { width: 100%; }
+    .gallery-container { grid-template-columns: 1fr; }
+    .A_box { width: 80%; }
+
+}
+
+/* SMALL PHONES 430px */
+@media only screen and (max-width: 430px) {
+    .heading { font-size: 28px; }
+    .btn { padding: 10px 16px; font-size: 16px; }
+    .content { width: 90%; }
+}
